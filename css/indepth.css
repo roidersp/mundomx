@@ -1,0 +1,17 @@
+.indepth_pages{
+	width: 100%;
+	min-width: 960px;
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+	font-family: 'Roboto';
+	font-size: 19px;
+	margin: auto;
+}
+
+#indepth_imag_cont{
+	width: 100%;
+	height: 700px;
+	background-image: url(../images/mundomx.jpg);
+	background-repeat: no-repeat;
+}
