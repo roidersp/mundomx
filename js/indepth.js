@@ -32,6 +32,8 @@ if(mobile){
 	$("#indepth_imag_cont").css({
 		"width":"2500px"
 	});
+	
+	
 }else{
 	if(h>760){
 		$(".indepth_cont").css("height",(h-60)+"px");
