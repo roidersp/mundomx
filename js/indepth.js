@@ -30,8 +30,42 @@ if(mobile){
 	
 	
 	$("#indepth_imag_cont").css({
-		"width":"2500px"
+		"width":"2500px",
+		"background-size":"100%"
 	});
+	
+	if(h<760 && w<h){
+		
+		h1=h-60;
+		w1=(2500*h1)/700;
+		
+		$("#indepth_imag_cont").css({
+		"height":h1+"px",
+		"width":w1+"px"
+	});
+	
+	
+	$(".indepth_cont").css("height",(h1)+"px");
+		
+	}
+	
+	if(h<500 && w>h){
+		
+		h1=h-60;
+		w1=(2500*h1)/700;
+		
+		$("#indepth_imag_cont").css({
+		"height":(h1)+"px",
+		"width":(w1+30)+"px"
+	});
+	
+	
+	$(".indepth_cont").css("height",(h1)+"px");
+		
+	}
+	
+	
+	
 	
 	
 }else{
@@ -59,8 +93,65 @@ $(window).on("resize", function(){
   pointY=0;
 
  f=(2500-w)/2;
-$("#indepth_imag_cont").css('background-position',-f+"px 0px");
  b=(2500-w);
+ 
+ 
+ if(mobile){
+	
+	
+	$("#indepth_imag_cont").css({
+		"width":"2500px",
+		"background-size":"100%"
+	});
+	
+	if(h<760 && w<h){
+		
+		h1=h-60;
+		w1=(2500*h1)/700;
+		
+		$("#indepth_imag_cont").css({
+		"height":h1+"px",
+		"width":w1+"px"
+	});
+	
+	
+	$(".indepth_cont").css("height",(h1)+"px");
+		
+	}
+	
+	if(h<500 && w>h){
+		
+		h1=h-60;
+		w1=(2500*h1)/700;
+		
+		$("#indepth_imag_cont").css({
+		"height":(h1)+"px",
+		"width":(w1+30)+"px"
+	});
+	
+	
+	$(".indepth_cont").css("height",(h1)+"px");
+		
+	}
+	
+	
+	
+	
+	
+}else{
+	if(h>760){
+		$(".indepth_cont").css("height",(h-60)+"px");
+	}
+	$("#indepth_imag_cont").css('background-position',-f+"px 0px");
+	$("#indepth_imag_cont").mousemove(function(event){
+
+	n=b*(event.pageX/w);
+	$("#indepth_imag_cont").css('background-position',(-n)+"px 0px");
+
+});
+}
+ 
+ 
 });
 
 
